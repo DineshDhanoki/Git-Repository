@@ -49,6 +49,7 @@ footer {
 footer div {
   display: flex;
   flex-direction: column;
+  gap: 0.5rem;
 }
 
 footer h2 {
@@ -115,6 +116,11 @@ footer button:hover {
   background-color: black;
 }
 
+.sidebarContents h2 {
+  font-weight: 200;
+  font-size: 1.5rem;
+}
+
 .sidebarContents div {
   flex: 1;
 }
@@ -127,11 +133,44 @@ footer button:hover {
   margin-left: auto;
   cursor: pointer;
   transition-duration: 200ms;
-  padding: 1rem;
+  padding: 1rem 0;
 }
 
 .sidebarContents button:hover {
   opacity: 0.7;
+}
+
+.descriptionContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.descriptionTitle {
+  font-size: 1.1rem;
+  font-weight: 200;
+}
+
+.loadingState {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.loadingState i {
+  opacity: 0.2;
+  font-size: 3rem;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @media (min-width: 640px) {
